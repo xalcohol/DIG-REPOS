@@ -8,7 +8,7 @@ local looping = false
 local function startLoop()
     while looping do
         sellRemote:FireServer()
-        task.wait(2)
+        task.wait(60)
     end
 end
 
