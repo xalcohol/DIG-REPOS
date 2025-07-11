@@ -1,0 +1,25 @@
+local UIS = game:GetService("UserInputService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local sellRemote = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Player_SellInventory")
+
+local looping = false
+
+-- Function to loop selling
+local function startLoop()
+    while looping do
+        sellRemote:FireServer()
+        task.wait(2)
+    end
+end
+
+UIS.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+
+    if input.KeyCode == Enum.KeyCode.T then
+        looping = not looping -- Toggle the loop on/off
+
+        if looping then
+            task.spawn(startLoop)
+        end
+    end
+end)
