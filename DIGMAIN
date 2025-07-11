@@ -1,0 +1,48 @@
+-- Keybind List:
+--/ H = Render // G = Farm // Y = Inf Yield // L = Anti Lag
+--/ P = Gold Nugget TP
+
+local UIS = game:GetService('UserInputService')
+local bool = false
+local farm = false
+local yield = false
+
+UIS.InputBegan:Connect(function(input)
+
+    -- P = Gold Nugget TP
+    if input.KeyCode == Enum.KeyCode.P then
+        loadstring(game:HttpGet("https://pastebin.com/raw/68XNFJtj"))()
+    end
+
+    -- H = Render
+    if input.KeyCode == Enum.KeyCode.H then
+        if bool == false then
+            game:GetService("RunService"):Set3dRenderingEnabled(false)
+            bool = true
+        else
+            game:GetService("RunService"):Set3dRenderingEnabled(true)
+            bool = false
+        end
+    end
+
+    -- G = Farm
+    if input.KeyCode == Enum.KeyCode.G then
+        if farm == false then
+            loadstring(game:HttpGet("https://init.frostbyte.lol"))();
+            farm = true
+        end
+    end
+
+    -- Y = Inf Yield
+    if input.KeyCode == Enum.KeyCode.Y then
+        if yield == false then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
+            yield = true
+        end
+    end
+
+    -- L = Anti Lag
+    if input.KeyCode == Enum.KeyCode.L then
+        loadstring(game:HttpGet("https://pastebin.com/raw/SmTSqyDh"))();
+    end
+end) 
