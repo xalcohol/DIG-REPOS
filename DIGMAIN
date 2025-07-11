@@ -1,11 +1,12 @@
 -- Keybind List:
 --/ H = Render // G = Farm // Y = Inf Yield // L = Anti Lag
---/ P = Gold Nugget TP
+--/ P = Gold Nugget TP // J = Auto Sell Toggle
 
 local UIS = game:GetService('UserInputService')
 local bool = false
 local farm = false
 local yield = false
+local eas = false
 
 UIS.InputBegan:Connect(function(input)
 
@@ -29,6 +30,8 @@ UIS.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.G then
         if farm == false then
             loadstring(game:HttpGet("https://init.frostbyte.lol"))();
+            task.wait(2)
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/AUTO%20SELL"))();
             farm = true
         end
     end
