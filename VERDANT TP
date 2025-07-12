@@ -1,17 +1,1 @@
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3540.00293, 82.0540695, 1443.66113, 0.418539166, 6.90491442e-09, 0.908198774, 2.03395634e-09, 1, -8.54020676e-09, -0.908198774, 5.42164758e-09, 0.418539166)
-task.wait(3)
-
-local objectName = "Core"
-local searchPath = game.Workspace.World.Interactive["Mysterious Flower"]
-local foundPart = searchPath:FindFirstChild(objectName)
-
-if searchPath and searchPath:FindFirstChild(objectName) then
-    local hint = Instance.new("Hint", workspace)
-    hint.Text = "Mysterious Flower Spawned!"
-
-    while foundPart.Parent.Parent do
-        task.wait(1)
-    end
-
-    hint:Destroy()
-end
