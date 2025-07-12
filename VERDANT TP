@@ -1,4 +1,4 @@
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3448.58765, 82.0540771, 1547.29968, -0.407505006, 6.90827706e-09, -0.913203001, -2.13380269e-09, 1, 8.51706794e-09, 0.913203001, 5.41934275e-09, -0.407505006)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3540.00293, 82.0540695, 1443.66113, 0.418539166, 6.90491442e-09, 0.908198774, 2.03395634e-09, 1, -8.54020676e-09, -0.908198774, 5.42164758e-09, 0.418539166)
 task.wait(3)
 
 local objectName = "Core"
