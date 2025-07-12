@@ -7,7 +7,12 @@ local bool = false
 local farm = false
 local yield = false
 
+
+
 UIS.InputBegan:Connect(function(input)
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/FLOWER%20DETECT"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/AUTO%20SELL"))();
 
     -- P = Gold Nugget TP
     if input.KeyCode == Enum.KeyCode.P then
@@ -15,7 +20,7 @@ UIS.InputBegan:Connect(function(input)
     end
 
     -- U = Flower TP
-    if input.KeyCode == Enum.KeyCode.P then
+    if input.KeyCode == Enum.KeyCode.U then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/VERDANT%20TP"))()
     end
 
@@ -34,10 +39,6 @@ UIS.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.G then
         if farm == false then
             loadstring(game:HttpGet("https://init.frostbyte.lol"))();
-                task.wait(2)
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/FLOWER%20DETECT"))();
-                    task.wait(2)
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/AUTO%20SELL"))();
             farm = true
         end
     end
