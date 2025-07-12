@@ -7,7 +7,7 @@ while true do
     if foundPart then
         local hint = Instance.new("Hint", workspace)
         hint.Text = "Mysterious Flower Spawned!"
-        wait(10)
+        wait(45)
         hint:Destroy()
     end
 
