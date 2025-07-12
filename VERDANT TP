@@ -5,7 +5,7 @@ local objectName = "Core"
 local searchPath = game.Workspace.World.Interactive["Mysterious Flower"]
 local foundPart = searchPath:FindFirstChild(objectName)
 
-if flowerPath and searchPath:FindFirstChild(objectName) then
+if searchPath and searchPath:FindFirstChild(objectName) then
     local hint = Instance.new("Hint", workspace)
     hint.Text = "Mysterious Flower Spawned!"
 
