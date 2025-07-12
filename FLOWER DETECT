@@ -1,0 +1,15 @@
+local objectName = "Core"
+local searchPath = game.Workspace.World.Interactive["Mysterious Flower"]
+
+while true do
+    local foundPart = searchPath:FindFirstChild(objectName)
+
+    if foundPart then
+        local hint = Instance.new("Hint", workspace)
+        hint.Text = "Mysterious Flower Spawned!"
+        wait(10)
+        hint:Destroy()
+    end
+
+    task.wait(60)
+end
