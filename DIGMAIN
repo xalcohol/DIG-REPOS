@@ -7,8 +7,6 @@ local bool = false
 local farm = false
 local yield = false
 
-
-
 UIS.InputBegan:Connect(function(input)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/FLOWER%20DETECT"))();
