@@ -9,7 +9,7 @@ if searchPath and searchPath:FindFirstChild(objectName) then
     local hint = Instance.new("Hint", workspace)
     hint.Text = "Mysterious Flower Spawned!"
 
-    while foundPart.Parent do
+    while foundPart.Parent.Parent do
         task.wait(1)
     end
 
