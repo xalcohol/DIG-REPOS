@@ -1,0 +1,6 @@
+local objectName = "Core"
+local searchPath = game.Workspace.World.Interactive["Mysterious Flower"]
+local foundPart = searchPath:FindFirstChild(objectName)
+local position = foundPart.Position
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
