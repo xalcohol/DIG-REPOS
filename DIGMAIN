@@ -1,7 +1,7 @@
 -- Keybind List:
 --/ H = Render // G = Farm // Y = Inf Yield // L = Anti Lag
 --/ P = Gold Nugget TP // U = Verdant TP // J = Auto Sell Toggle
---/ X = Meteor TP // C = Flower TP
+--/ X = Meteor TP // C = Flower TP // V = Traveling Merchant TP
 
 local UIS = game:GetService('UserInputService')
 local bool = false
@@ -29,6 +29,11 @@ UIS.InputBegan:Connect(function(input)
     -- C = Flower TP
     if input.KeyCode == Enum.KeyCode.C then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/FLOWER%20TP"))();
+    end
+
+    -- V = Traveling Merchant TP
+    if input.KeyCode == Enum.KeyCode.C then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/MERCHANT%20TP"))();
     end
 
     -- H = Render
