@@ -21,7 +21,7 @@ UIS.InputBegan:Connect(function(input)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/VERDANT%20TP"))()
     end
 
-    -- X = Flower Scan
+    -- X = Meteor TP
     if input.KeyCode == Enum.KeyCode.X then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/METEOR%20TP"))();
     end
