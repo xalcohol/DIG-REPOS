@@ -1,7 +1,7 @@
 -- Keybind List:
 --/ H = Render // G = Farm // Y = Inf Yield // L = Anti Lag
 --/ P = Gold Nugget TP // U = Verdant TP // J = Auto Sell Toggle
---/ X = Enable Flower Scan // C = Flower TP
+--/ X = Meteor TP // C = Flower TP
 
 local UIS = game:GetService('UserInputService')
 local bool = false
@@ -23,10 +23,7 @@ UIS.InputBegan:Connect(function(input)
 
     -- X = Flower Scan
     if input.KeyCode == Enum.KeyCode.X then
-        if scan == false then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/FLOWER%20DETECT"))();
-            scan = true
-        end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/METEOR%20TP"))();
     end
 
     -- C = Flower TP
