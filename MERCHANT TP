@@ -1,0 +1,6 @@
+local objectName = "Center"
+local searchPath = game.Workspace.World.NPCs["Merchant Cart"]
+local foundPart = searchPath:FindFirstChild(objectName)
+local position = foundPart.Position
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
