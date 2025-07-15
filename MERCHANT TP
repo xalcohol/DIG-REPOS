@@ -1,4 +1,4 @@
-local objectName = "Center"
+local objectName = "DO NOT DELETE!!!"
 local searchPath = game.Workspace.World.NPCs["Merchant Cart"]
 local foundPart = searchPath:FindFirstChild(objectName)
 local position = foundPart.Position
