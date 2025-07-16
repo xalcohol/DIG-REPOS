@@ -18,7 +18,7 @@ local function showHint(text)
     hint.Text = text
     hint.Parent = playerGui
 
-    task.delay(0.997, function()
+    task.delay(0.999, function()
         if hint then
             hint:Destroy()
             hint = nil
