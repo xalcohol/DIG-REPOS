@@ -32,7 +32,7 @@ UIS.InputBegan:Connect(function(input)
     end
 
     -- V = Traveling Merchant TP
-    if input.KeyCode == Enum.KeyCode.C then
+    if input.KeyCode == Enum.KeyCode.V then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/MERCHANT%20TP"))();
     end
 
