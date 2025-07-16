@@ -2,24 +2,62 @@ local UIS = game:GetService("UserInputService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local sellRemote = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Player_SellInventory")
 
+local timerDuration = 1800 -- in seconds
+local currentTime = timerDuration
 local looping = false
 
--- Function to loop selling
-local function startLoop()
+local Players = game:GetService("Players")
+local playerGui = Players.LocalPlayer:FindFirstChild("PlayerGui") or workspace
+local hint -- declared globally for recreation
+
+local function showHint(text)
+    if hint then
+        hint:Destroy()
+    end
+    hint = Instance.new("Hint")
+    hint.Text = text
+    hint.Parent = playerGui
+
+    task.delay(0.997, function()
+        if hint then
+            hint:Destroy()
+            hint = nil
+        end
+    end)
+end
+
+local function onTimerFinished()
+    showHint("Timer finished! Selling...")
+    sellRemote:FireServer()
+end
+
+local function startTimer()
     while looping do
-        sellRemote:FireServer()
-        task.wait(1800)
+        currentTime = timerDuration
+        showHint("Auto Sell Timer: " .. currentTime)
+
+        while currentTime > 0 and looping do
+            task.wait(1)
+            currentTime -= 1
+            showHint("Auto Sell Timer: " .. currentTime)
+        end
+
+        if looping then
+            onTimerFinished()
+        end
     end
 end
 
 UIS.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
-
     if input.KeyCode == Enum.KeyCode.J then
-        looping = not looping -- Toggle the loop on/off
+        looping = not looping
 
         if looping then
-            task.spawn(startLoop)
+            showHint("Auto-sell + Timer started")
+            task.spawn(startTimer)
+        else
+            showHint("Auto-sell + Timer stopped")
         end
     end
 end)
