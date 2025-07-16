@@ -2,7 +2,7 @@ local UIS = game:GetService("UserInputService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local sellRemote = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Player_SellInventory")
 
-local timerDuration = 1800 -- in seconds
+local timerDuration = 2700 -- in seconds
 local currentTime = timerDuration
 local looping = false
 
