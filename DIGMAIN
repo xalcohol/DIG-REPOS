@@ -21,6 +21,11 @@ UIS.InputBegan:Connect(function(input)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/VERDANT%20TP"))()
     end
 
+    -- Z = Meteor TP
+    if input.KeyCode == Enum.KeyCode.Z then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/INTERLUDE%20TP"))();
+    end
+
     -- X = Meteor TP
     if input.KeyCode == Enum.KeyCode.X then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/METEOR%20TP"))();
