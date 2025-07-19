@@ -1,6 +1,6 @@
 -- Keybind List:
 --/ H = Render // G = Farm // Y = Inf Yield // L = Anti Lag
---/ P = Dino Spine TP // U = Verdant TP // J = Auto Sell Toggle
+--/ P = Pig TP // U = Verdant TP // J = Auto Sell Toggle
 --/ X = Meteor TP // C = Flower TP // V = Traveling Merchant TP
 
 local UIS = game:GetService('UserInputService')
@@ -13,7 +13,7 @@ UIS.InputBegan:Connect(function(input)
 
     -- P = Dino Spine TP
     if input.KeyCode == Enum.KeyCode.P then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/SPINE%20TP"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xalcohol/DIG-REPOS/refs/heads/main/PIG%20TP"))()
     end
 
     -- U = Verdant TP
